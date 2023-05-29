@@ -19,6 +19,7 @@ set (HEADERS
     kaitai/kaitaistream.h
     kaitai/kaitaistruct.h
     kaitai/exceptions.h
+    kaitai/byteswap.h  # Custom header for arm-none-eabi
 )
 
 set (SOURCES
@@ -29,7 +30,7 @@ set(STRING_ENCODING_TYPE "ICONV" CACHE STRING "Set the way strings have to be en
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
-add_library (${PROJECT_NAME} SHARED ${HEADERS} ${SOURCES})
+add_library (${PROJECT_NAME} STATIC ${HEADERS} ${SOURCES})
 set_property(TARGET ${PROJECT_NAME} PROPERTY PUBLIC_HEADER ${HEADERS})
 
 if (ZLIB_FOUND)

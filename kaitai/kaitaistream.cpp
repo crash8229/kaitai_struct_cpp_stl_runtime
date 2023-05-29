@@ -27,8 +27,8 @@
 #define __BIG_ENDIAN    BIG_ENDIAN
 #define __LITTLE_ENDIAN LITTLE_ENDIAN
 #else // !__APPLE__ or !_MSC_VER or !__QNX__
-#include <endian.h>
-#include <byteswap.h>
+#include <machine/endian.h>
+#include <kaitai/byteswap.h>
 #endif
 
 #include <iostream>
