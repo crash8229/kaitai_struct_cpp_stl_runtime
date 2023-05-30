@@ -26,7 +26,7 @@ set (SOURCES
     kaitai/kaitaistream.cpp
 )
 
-set(STRING_ENCODING_TYPE "ICONV" CACHE STRING "Set the way strings have to be encoded (ICONV|NONE|...)")
+set(STRING_ENCODING_TYPE "NONE" CACHE STRING "Set the way strings have to be encoded (ICONV|NONE|...)")
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
